@@ -27,8 +27,8 @@ plot(1:numData2, PowerConsumption2$Sub_metering_1, type = 'l',
 ## add more lines to the plot
 lines(1:numData2, PowerConsumption2$Sub_metering_2, col = "red")
 lines(1:numData2, PowerConsumption2$Sub_metering_3, col = "blue")
-## set the axis labels
-axis(side = 1, at = c(1, numData2/2, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
+## set the x-axis
+axis(side = 1, at = c(1, numData2/2 + 1, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
 ## set the legend
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        col = c("black", "red", "blue"), lty = c(1, 1, 1))

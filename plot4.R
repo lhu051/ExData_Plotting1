@@ -27,27 +27,27 @@ numData2 <- nrow(PowerConsumption2)
 ## Upper-left panel
 plot(1:numData2, PowerConsumption2$Global_active_power, type = 'l',
      main = " ", xlab = " ", ylab = "Global Active Power", xaxt = 'n')
-## set the axis labels
-axis(side = 1, at = c(1, numData2/2, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
+## set the x-axis
+axis(side = 1, at = c(1, numData2/2 + 1, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
 ##
 ## Upper-right panel
 plot(1:numData2, PowerConsumption2$Voltage, type = 'l',
      main = " ", xlab = "datetime", ylab = "Voltage", xaxt = 'n')
-axis(side = 1, at = c(1, numData2/2, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
+axis(side = 1, at = c(1, numData2/2 + 1, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
 ##
 ## Lower-left panel
 plot(1:numData2, PowerConsumption2$Sub_metering_1, type = 'l',
      main = " ", xlab = " ", ylab = "Energy sub metering", xaxt = 'n')
 lines(1:numData2, PowerConsumption2$Sub_metering_2, col = "red")
 lines(1:numData2, PowerConsumption2$Sub_metering_3, col = "blue")
-axis(side = 1, at = c(1, numData2/2, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
+axis(side = 1, at = c(1, numData2/2 + 1, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        col = c("black", "red", "blue"), lty = c(1, 1, 1), bty = 'n')
 ##
 ## Lower-right panel
 plot(1:numData2, PowerConsumption2$Global_reactive_power, type = 'l',
      main = " ", xlab = "datetime", ylab = "Global_reactive_power", xaxt = 'n')
-axis(side = 1, at = c(1, numData2/2, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
+axis(side = 1, at = c(1, numData2/2 + 1, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
 ##
 dev.off() ## close the device to save the figure
 
