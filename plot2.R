@@ -24,8 +24,8 @@ numData2 <- nrow(PowerConsumption2)
 ##
 plot(1:numData2, PowerConsumption2$Global_active_power, type = 'l',
      main = " ", xlab = " ", ylab = "Global Active Power (kilowatts)", xaxt = 'n')
-## set the x-axis labels
-axis(side = 1, at = c(1, numData2/2, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
+## set the x-axis
+axis(side = 1, at = c(1, numData2/2 + 1, numData2 + 1), labels = c("Thu", "Fri", "Sat"))
 ##
 dev.off() ## close the device to save the figure
 ##
